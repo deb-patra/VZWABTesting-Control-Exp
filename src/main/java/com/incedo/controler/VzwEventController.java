@@ -84,7 +84,7 @@ public class VzwEventController {
     		} else {
     			showNormalHeader(model, "promo");
     		}
-    		eventUtilService.setModelAttribute(model, experimentVariantVo, "/vz"+checkoutPage, "gridwall", "grid_wall", null);
+    		eventUtilService.setModelAttribute(model, experimentVariantVo, "/vzw"+checkoutPage, "gridwall", "grid_wall", null);
     		EventSubmitRequestVO eventSubmit = eventService.incedoEvent(experimentVariantVo, "promo");
     		System.out.println("eventSubmit::::Gridwal::::"+eventSubmit.toString());
     		eventService.pushNewEvent(eventSubmit);
@@ -127,7 +127,7 @@ public class VzwEventController {
     		}
     		
     		// Setting Attributes for UI
-    		eventUtilService.setModelAttribute(model, experimentVariantVo, "/vz"+checkoutPage, "gridwall", "grid_wall", null);
+    		eventUtilService.setModelAttribute(model, experimentVariantVo, "/vzw"+checkoutPage, "gridwall", "grid_wall", null);
     		
     		// Generating new event
     		EventSubmitRequestVO eventSubmit = eventService.incedoEvent(experimentVariantVo, "promo");
@@ -159,7 +159,7 @@ public class VzwEventController {
     		} else {
     			showNormalHeader(model, "checkout");
     		}
-    		eventUtilService.setModelAttribute(model, experimentVariantVo, null, "checkout", "checkout", "/vz/vzwPromoPage/");
+    		eventUtilService.setModelAttribute(model, experimentVariantVo, null, "checkout", "checkout", "/vzw/vzwPromoPage/");
     		EventSubmitRequestVO eventSubmit = eventService.incedoEvent(experimentVariantVo, "checkout");
     		System.out.println("eventSubmit::::Checkout::::"+eventSubmit.toString());
     		eventService.pushNewEvent(eventSubmit);
